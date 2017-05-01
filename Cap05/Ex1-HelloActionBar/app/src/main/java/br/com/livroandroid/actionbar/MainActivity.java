@@ -20,6 +20,17 @@ public class MainActivity extends Activity {
         ActionBar actionBar = getActionBar();
         actionBar.setTitle("Capítulo 5");
 
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+        actionBar.addTab(actionBar.newTab().setText("Tab 1")
+        .setTabListener(new MyTabListener(this,1)));
+
+        actionBar.addTab(actionBar.newTab().setText("Tab 2")
+                .setTabListener(new MyTabListener(this,2)));
+
+        actionBar.addTab(actionBar.newTab().setText("Tab 3")
+                .setTabListener(new MyTabListener(this,3)));
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
